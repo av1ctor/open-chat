@@ -28,6 +28,13 @@ impl AccessTypeArgs {
             _ => None,
         }
     }
+
+    pub fn role(&self) -> Option<GroupRole> {
+        match self {
+            AccessTypeArgs::BotActionByCommand(args) => Some(args.initiator_role),
+            _ => None,
+        }
+    }
 }
 
 #[derive(Serialize, Deserialize, Debug)]

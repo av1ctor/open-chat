@@ -346,6 +346,7 @@ pub struct BotCommand {
     pub name: String,
     pub args: Vec<BotCommandArg>,
     pub initiator: UserId,
+    pub initiator_role: GroupRole,
     pub meta: Option<BotCommandMeta>,
 }
 
